@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     environment {
         SONARQUBE_SERVER = 'Devsecops-sonarqube' // Name of SonarQube server configured in Jenkins
     }
