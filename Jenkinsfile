@@ -12,7 +12,8 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv(SONARQUBE_SERVER) {
-                  sh 'mvn clean package sonar:sonar'
+                    sh 'npm install'
+                    sh "${tool('SonarQubeScanner')}/bin/sonar-scanner"
                 }
             }
         }
