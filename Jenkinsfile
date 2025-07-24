@@ -1,7 +1,7 @@
 pipeline {
     agent none
     environment {
-        SONARQUBE_SERVER = *Devsecops-sonarqube.' // Name of SonarQube server configured in Jenkins
+        SONARQUBE_SERVER = 'Devsecops-sonarqube' // Name of SonarQube server configured in Jenkins
     }
     stages {
         stage('Checkout') {
