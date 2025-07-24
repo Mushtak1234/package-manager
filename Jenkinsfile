@@ -12,7 +12,6 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv(SONARQUBE_SERVER) {
-                    sh 'npm install'
                     sh "${tool('SonarQubeScanner')}/bin/sonar-scanner"
                 }
             }
